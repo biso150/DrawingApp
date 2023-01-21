@@ -1,0 +1,107 @@
+@import "reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&display=swap');
+
+
+* {
+  box-sizing: border-box;
+  font-size: 14px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+  background: #dfe6e9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 30px;
+  padding: 20px;
+}
+
+canvas {
+  background: #fff;
+  border-radius: 10px;
+  cursor: crosshair;
+  border: 2px solid #999;
+}
+
+.title {
+  font-size: 26px;
+  text-align: center;
+  font-weight: 600;
+  line-height: 2.5;
+}
+
+.color-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.color-picker, .file-btn {
+  all: unset;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.color {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  margin-bottom: 10px;
+}
+
+.color-label {
+  background: linear-gradient(90deg, #e74c3c, #f1c40f, #1abc9c,
+   #3498db, #9b59b6);
+}
+
+.color-option, .color-label {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+.btn-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btns {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+button, .file-label {
+  all: unset;
+  background: #34495e;
+  border-radius: 5px;
+  color: #fff;
+  padding: 6px 10px;
+  text-align: center;
+  flex: 1 1 0;
+  cursor: pointer;
+  transition: opacity .3s;
+}
+
+button:hover, .file-label:hover {
+  opacity: 0.9;
+}
+
+input, select {
+  flex: 1 1 0;
+}
+
+select, input:not([type="text"]) {
+  cursor: pointer;
+}

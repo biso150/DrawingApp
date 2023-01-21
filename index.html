@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meme Maker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="color-box">
+    <span class="color"></span>
+    <label for="color" class="color-label">
+      <input type="color" class="color-picker" id="color">
+    </label>
+    <div class="color-option" data-color="#e74c3c"></div>
+    <div class="color-option" data-color="#e67e22"></div>
+    <div class="color-option" data-color="#f1c40f"></div>
+    <div class="color-option" data-color="#25bb64"></div>
+    <div class="color-option" data-color="#3498db"></div>
+    <div class="color-option" data-color="#273c75"></div>
+    <div class="color-option" data-color="#9b59b6"></div>
+    <div class="color-option" data-color="#95a5a6"></div>
+    <div class="color-option" data-color="#000000"></div>
+  </div>
+  <canvas></canvas>
+  <div class="btn-box">
+    <h2 class="title">DRAW</h2>
+    <div class="btns">
+      <span>Line Width</span>
+      <input type="range" min="1" max="10" value="3" class="line-width">
+    </div>
+    <div class="btns">
+      <span>Fill Mode & Draw Mode</span>
+      <button class="mode-btn">Draw Mode</button>
+    </div>
+    <div class="btns">
+      <span>Draw Fill & Draw Stroke</span>
+      <button class="draw-btn">Draw Stroke</button>
+    </div>
+    <div class="btns">
+      <button class="eraser-btn">Eraser Off</button>
+      <button class="destroy-btn">Destroy</button>
+    </div>
+    <h2 class="title">TEXT</h2>
+    <div class="btns">
+      <span>Font Family</span>
+      <select class="font-family">
+        <option value="Noto Sans KR">Noto Sans KR</option>
+        <option value="Dongle">Dongle</option>
+        <option value="Gaegu">Gaegu</option>
+      </select>
+    </div>
+    <div class="btns">
+      <span>Font Style</span>
+      <select class="font-style">
+        <option value="normal">normal</option>
+        <option value="bold">bold</option>
+        <option value="italic">italic</option>
+      </select>
+    </div>
+    <div class="btns">
+      <span>Font Size</span>
+      <input type="range" min="10" max="40" value="20" step="2" class="font-size">
+    </div>
+    <div class="btns">
+      <span>Font Fill & Font Stroke</span>
+      <button class="font-mode">Font Fill</button>
+    </div>
+    <div class="btns">
+      <span>Text</span>
+      <input type="text" class="text-input" placeholder="Write and then double click">
+    </div>
+    <h2 class="title">FILE</h2>
+    <div class="btns">
+      <label for="file" class="file-label">Add File
+        <input type="file" accept="image/*" class="file-btn" id="file">
+      </label>
+      <button class="save-btn">Save Image</button>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
