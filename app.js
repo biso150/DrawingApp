@@ -1,3 +1,10 @@
+let font = new FontFace("Noto Sans KR", "url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap')");
+font.load();
+font = new FontFace("Dongle", "url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap')");
+font.load();
+font = new FontFace("Gaegu", "url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&display=swap')");
+font.load();
+
 const canvas = document.querySelector("canvas");
 const lineWidth = document.querySelector(".line-width");
 const color = document.querySelector(".color");
@@ -35,6 +42,8 @@ let isDrawFill = false;
 let isEraser = false;
 ctx.font = `${fontStyle.value} ${fontSize.value}px ${fontFamily.value}`;
 let isFontFill = true;
+
+
 // ctx.fillRect(50, 50, 100, 100);
 
 // ctx.rect(150, 150, 100, 100);
@@ -72,7 +81,7 @@ function onMove (event) {
   }
 }
 function endPainting () {
-  if (isDrawFill) {
+  if (isDrawFill && !isEraser) {
     ctx.fill();
   }
   isPainting = false;
